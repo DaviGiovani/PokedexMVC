@@ -7,4 +7,5 @@ O usuário pode cadastrar um treinador usando os campos Nome, Equipe, Altura, Pe
 ### - Visualizar Treinadores:
 Nesta página, o usuário pode visualizar todos os treinadores já cadastrados no banco de dados, com seus respectivos pokémons.
 
-**Para executar o código, o usuário deve ter um banco de dados em PgSql cadastrado como: Trainer.
+
+*Para executar o código, o usuário deve ter um banco de dados em PgSql cadastrado como: Trainer.
