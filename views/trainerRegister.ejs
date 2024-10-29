@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Treinador</title>
+    <link rel="stylesheet" href="/css/trainerRegister.css">
+</head>
+<body>
+    <h1>Cadastrar Treinador Pokémon</h1>
+    <form action="/register" method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="team">Equipe:</label>
+        <input type="text" name="team" id="team" required>
+
+        <label for="height">Altura:</label>
+        <input type="number" name="height" id="height" required>
+
+        <label for="weight">Peso:</label>
+        <input type="number" name="weight" id="weight" required>
+
+        <label for="pokemon">Pokémons na Party (separados por vírgula):</label>
+        <input type="text" name="pokemon" id="party" required>
+
+        <button type="submit">Cadastrar Treinador</button>
+    </form>
+</body>
+<footer>
+    <p>Rotas disponíveis:</p>
+    <ul>
+        <li><a href="/">Página Inicial</a></li>
+        <li><a href="/register">Cadastrar Treinador</a></li>
+        <li><a href="/trainers">Lista de Treinadores</a></li>
+        <li><a href="/search">Buscar Pokémon</a></li>
+    </ul>
+</footer>
+</html>
