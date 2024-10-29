@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinadores Cadastrados</title>
+    <link rel="stylesheet" href="/css/trainerList.css">
+</head>
+<body>
+    <h1>Lista de Treinadores</h1>
+    <ul>
+        <% trainers.forEach(trainer => { %>
+          <li>
+            <h2><%= trainer.name %> (Equipe: <%= trainer.team %>)</h2>
+            <p>Altura: <%= trainer.height %> cm</p>
+            <p>Peso: <%= trainer.weight %> kg</p>
+            <h3>Pokémons:</h3>
+            <ul class="pokemon-party">
+              <% trainer.party.forEach(pokemon => { %>
+                <li>
+                  <img src="<%= pokemon.sprite %>" alt="<%= pokemon.name %>">
+                  <p><strong><%= pokemon.name %></strong></p> 
+                  <p>Altura: <%= pokemon.height %> dm</p>
+                  <p>Peso: <%= pokemon.weight %> hg</p>
+                </li>
+              <% }) %>
+            </ul>
+          </li>
+        <% }) %>
+      </ul>      
+    <a href="/register">Cadastrar Novo Treinador</a>
+</body>
+<footer>
+    <p>Rotas disponíveis:</p>
+    <ul>
+        <li><a href="/">Página Inicial</a></li>
+        <li><a href="/register">Cadastrar Treinador</a></li>
+        <li><a href="/trainers">Lista de Treinadores</a></li>
+        <li><a href="/search">Buscar Pokémon</a></li>
+    </ul>
+</footer>
+</html>

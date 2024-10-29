@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Busca</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="pokedex-container"> 
+        <div class="pokedex">
+            <img src="/images/pokedex.png" alt="Pokedex">
+            <img class="pokemon__sprite" src="<%= pokemon.image %>" alt="Imagem do Pokémon">
+            <div class="pokemon-info">
+                
+                <h1 class="pokemon__name capitalize"><%= pokemon.name %></h1>
+                <p>Número: <%= pokemon.number %></p>
+                <p>Altura: <%= pokemon.height %> m</p>
+                <p>Peso: <%= pokemon.weight %> kg</p>
+                <p>Tipos: <%= pokemon.types.join(', ') %></p>
+                <p>Habilidades: <%= pokemon.abilities.join(', ') %></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Rotas disponíveis:</p>
+        <ul>
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/register">Cadastrar Treinador</a></li>
+            <li><a href="/trainers">Lista de Treinadores</a></li>
+            <li><a href="/search">Buscar Pokémon</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
