@@ -1,4 +1,5 @@
-# Pokédex em MVC
+# Pokédex em MVC 
+## Vers. 1.0
 Neste projeto feito em node e com a estrutura em MVC e elaborado pelo professor em sala de aula. O usuário pode:
 ### - Buscar Pokémons
 Graças à PokeAPI, o usuário pode buscar um pokemón pelo nome ou número. A página de resultado apresenta uma imagem animada do pokémon, nome, altura e peso e habilidades.
@@ -20,5 +21,7 @@ Nesta página, o usuário pode visualizar todos os treinadores já cadastrados n
 ![image](https://github.com/user-attachments/assets/3e93e95a-8b70-4ee0-87a8-4305309e0933)
 ![image](https://github.com/user-attachments/assets/85b9a612-000f-4186-a7ab-85cd161f5821)
 
+## Vers. 1.1
+Agora, após o usuário buscar um pokémon, ele tem a opção de ver a versão shiny desse pokémon. 
 
 
