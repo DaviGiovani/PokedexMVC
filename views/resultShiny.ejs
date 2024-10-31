@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado da Busca</title>
+    <title>Versão Shiny</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/images/favicon.png" />
 </head>
@@ -11,19 +11,19 @@
     <div class="pokedex-container"> 
         <div class="pokedex">
             <img src="/images/pokedex.png" alt="Pokedex">
-            <img class="pokemon__sprite" src="<%= pokemon.image %>" alt="Imagem do Pokémon">
+            <img class="pokemon__sprite" src="<%= shinyPokemon.image %>" alt="Sprite Shiny do Pokémon">
             <div class="pokemon-info">   
-                <h1 class="pokemon__name capitalize"><%= pokemon.name %></h1>
-                <p>Número: <%= pokemon.number %></p>
-                <p>Altura: <%= pokemon.height %> m</p>
-                <p>Peso: <%= pokemon.weight %> kg</p>
-                <p>Tipos: <%= pokemon.types.join(', ') %></p>
-                <p>Habilidades: <%= pokemon.abilities.join(', ') %></p>
+                <h1 class="pokemon__name capitalize"><%= shinyPokemon.name %></h1>
+                <p>Número: <%= shinyPokemon.number %></p>
+                <p>Altura: <%= shinyPokemon.height %> m</p>
+                <p>Peso: <%= shinyPokemon.weight %> kg</p>
+                <p>Tipos: <%= shinyPokemon.types.join(', ') %></p>
+                <p>Habilidades: <%= shinyPokemon.abilities.join(', ') %></p>
             </div>
         </div>
     </div>
-    <a href="/pokemon/shiny?name=<%= pokemon.name %>">
-        <button>Ver versão Shiny</button>
+    <a href="/pokemon?name=<%= shinyPokemon.name %>">
+        <button>Ver versão padrão</button>
     </a>
     <footer>
         <p>Rotas disponíveis:</p>

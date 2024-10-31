@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Pokémon</title>
+    <link rel="stylesheet" href="/css/compare.css">
+</head>
+<body>
+    <h1>Comparação de Pokémon</h1>
+    <div class="comparison-container">
+        <div class="pokemon">
+            <h2><%= pokemon1.name %> (#<%= pokemon1.number %>)</h2>
+            <img src="<%= pokemon1.image %>" alt="<%= pokemon1.name %>">
+            <p>Tipos: <%= pokemon1.types.join(', ') %></p>
+            <p>Habilidades: <%= pokemon1.abilities.join(', ') %></p>
+            <h3>Estatísticas:</h3>
+            <ul>
+                <% pokemon1.stats.forEach(stat => { %>
+                    <li><%= stat.name %>: <%= stat.value %></li>
+                <% }); %>
+            </ul>
+        </div>
+        
+        <div class="pokemon">
+            <h2><%= pokemon2.name %> (#<%= pokemon2.number %>)</h2>
+            <img src="<%= pokemon2.image %>" alt="<%= pokemon2.name %>">
+            <p>Tipos: <%= pokemon2.types.join(', ') %></p>
+            <p>Habilidades: <%= pokemon2.abilities.join(', ') %></p>
+            <h3>Estatísticas:</h3>
+            <ul>
+                <% pokemon2.stats.forEach(stat => { %>
+                    <li><%= stat.name %>: <%= stat.value %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+    
+    <a href="/search"><button>Voltar</button></a>
+
+    <footer>
+        <p>Rotas disponíveis:</p>
+        <ul>
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/register">Cadastrar Treinador</a></li>
+            <li><a href="/trainers">Lista de Treinadores</a></li>
+            <li><a href="/search">Buscar Pokémon</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

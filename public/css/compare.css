@@ -1,44 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
+}
+
 body {
+    text-align: center;
+    min-height: 100vh;
     background: linear-gradient(to bottom, #6ab7f5, #fff);
-    color: rgb(0, 0, 0); 
-    font-family: 'Oxanium', cursive;
-    padding: 20px;
+    padding: 20px; 
 }
 
-h1 {
+.comparison-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 30px; 
+    margin-bottom: 30px; 
+}
+
+.pokemon {
+    margin: 0 20px; 
+    padding: 30px; 
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
     text-align: center; 
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    padding: 20px;
 }
 
-form {
-    background-color: #ffffffc9; 
-    border-radius: 5px; 
-    border-color: black;
-    padding: 40px;
-    margin: 50px auto; 
-    max-width: 350px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-label {
-    display: block; 
-    margin-bottom: 10px; 
-    font-weight: bold; 
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 94%; 
-    padding: 10px; 
-    border: none; 
-    border-radius: 5px; 
-    margin-bottom: 15px;
-    background-color: #ffffff; 
-    color: black; 
+.pokemon img {
+    max-width: 100%; 
+    height: auto; 
 }
 
 button {
@@ -52,36 +48,40 @@ button {
     color: white;
     font-size: 1.2em;
     font-weight: bold;
-    font-family: 'Oxanium', cursive;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #ffffffa8;
     color: #000;
-  }
-  
-  button:active {
+}
+
+button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 1.1em;
-  }
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
 
 footer {
-    background-color: #a10c0c; 
+    background-color: #a10c0c;
     color: white; 
     text-align: center; 
     padding: 20px 0; 
-    position: relative; 
     bottom: 0; 
     width: 100%; 
-    margin-top: 20px;
+    margin-top: 50px; 
 }
 
 footer ul {
-    list-style-type: none;
-    padding: 0; 
+    list-style-type: none; 
+    padding: 0;
     margin: 0; 
 }
 
