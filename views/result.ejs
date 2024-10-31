@@ -12,8 +12,7 @@
         <div class="pokedex">
             <img src="/images/pokedex.png" alt="Pokedex">
             <img class="pokemon__sprite" src="<%= pokemon.image %>" alt="Imagem do Pokémon">
-            <div class="pokemon-info">
-                
+            <div class="pokemon-info">   
                 <h1 class="pokemon__name capitalize"><%= pokemon.name %></h1>
                 <p>Número: <%= pokemon.number %></p>
                 <p>Altura: <%= pokemon.height %> m</p>
@@ -23,6 +22,9 @@
             </div>
         </div>
     </div>
+    <a href="/pokemon/shiny?name=<%= pokemon.name %>">
+        <button>Ver versão Shiny</button>
+    </a>
     <footer>
         <p>Rotas disponíveis:</p>
         <ul>

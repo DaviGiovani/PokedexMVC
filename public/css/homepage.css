@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
 body {
     background: linear-gradient(to bottom, #6ab7f5, #fff);
     color: black; 
@@ -35,20 +36,32 @@ body {
     margin: 10px; 
 }
 
-.routes a {
-    display: block;
-    padding: 10px 15px; 
-    background-color: #ffffff; 
-    color: #000000; 
+button {
+    padding: 15px;
+    width: 100%; 
+    max-width: 350px; 
+    justify-content: center;
+    border: none;
     border-radius: 5px;
-    text-decoration: none; 
+    background-color: #0000005f;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Oxanium', cursive;
+    font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
 }
 
-.routes a:hover {
-    background-color: #632b2b57; 
+button:hover {
+    background-color: #ffffffa8;
+    color: #000;
 }
 
+button:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.2em;
+}
 
 h1 {
     margin-bottom: 20px; 

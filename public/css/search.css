@@ -13,14 +13,17 @@ body {
   min-height: 100vh;
 }
 h1 {
-    margin: 100px 0;
-
-  }
+  margin-top: 50px; 
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0); 
+  font-size: 25px;
+}
 
 h2 {
-    margin-top: 10px; 
-    color: white; 
-  }
+  margin-top: 50px; 
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0); 
+}
 
 ul {
   list-style-type: none; 
@@ -87,6 +90,10 @@ p {
     font-size: 1.1em;
 }
 
+label {
+margin-top: 10px;
+
+}
 
 footer {
     background-color: #a10c0c;
@@ -95,7 +102,7 @@ footer {
     padding: 20px 0; 
     bottom: 0; 
     width: 100%; 
-    margin-top: 230px;
+    margin-top: 180px;
   }
   
   footer ul {
