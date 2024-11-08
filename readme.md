@@ -26,4 +26,10 @@ Nesta página, o usuário pode visualizar todos os treinadores já cadastrados n
 - Além disso, na página de busca, o usuário pode comparar 2 pokémons inserindo-os nos campos de comparação.
 - Correção de alguns desequilíbrios estéticos
 
+## Versão 1.2
+- O usuário não precisa mais adicionar pokémons separando-os por vírgulas. Um botão foi adicionado para que o usuário adicione um por um, mostrando sua imagem e nome
+- Na página de busca, uma lista de pokémons é mostrada conforme o usuário digita.
+- Na página de comparar pokémon, os stats piores ficam em vermelho, e os melhores em verde.
+- Parte estética melhorada.
+
 
