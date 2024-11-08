@@ -13,7 +13,7 @@ exports.getPokemon = async (req, res) => {
       number: response.data.id,
       types: response.data.types.map(typeInfo => typeInfo.type.name),
       abilities: response.data.abilities.map(abilityInfo => abilityInfo.ability.name),
-      image: response.data.sprites.versions['generation-v']['black-white'].animated.front_default,
+      image: response.data.sprites.versions?.['generation-v']?.['black-white']?.animated?.front_default || response.data.sprites.front_default,
       height: response.data.height / 10,
       weight: response.data.weight / 10,
     };
@@ -32,17 +32,7 @@ exports.getShinyPokemon = async (req, res) => {
       number: response.data.id,
       types: response.data.types.map(typeInfo => typeInfo.type.name),
       abilities: response.data.abilities.map(abilityInfo => abilityInfo.ability.name),
-      image: response.data.sprites.versions['generation-v']['black-white'].animated.front_shiny,
-      height: response.data.height / 10,
-      weight: response.data.weight / 10,
-    };
-
-    const pokemon = {
-      name: response.data.name,
-      number: response.data.id,
-      types: response.data.types.map(typeInfo => typeInfo.type.name),
-      abilities: response.data.abilities.map(abilityInfo => abilityInfo.ability.name),
-      image: response.data.sprites.versions['generation-v']['black-white'].animated.front_default,
+      image: response.data.sprites.versions?.['generation-v']?.['black-white']?.animated?.front_shiny || response.data.sprites.front_shiny,
       height: response.data.height / 10,
       weight: response.data.weight / 10,
     };

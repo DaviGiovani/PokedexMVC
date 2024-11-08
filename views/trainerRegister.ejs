@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<link rel="shortcut icon" href="/images/favicon.png" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Treinador</title>
     <link rel="stylesheet" href="/css/trainerRegister.css">
+    <link rel="shortcut icon" href="/images/favicon.png" />
 </head>
 <body>
     <h1>Cadastrar Treinador Pokémon</h1>
@@ -22,8 +22,17 @@
         <label for="weight">Peso (kg):</label>
         <input type="number" name="weight" id="weight" required>
 
-        <label for="pokemon">Pokémons na Party (separados por vírgula):</label>
-        <input type="text" name="pokemon" id="party" required>
+        <label for="pokemon">Adicionar Pokémon:</label>
+        <input type="text" id="pokemon-input">
+        <ul id="pokemon-suggestions" class="scrollable-list"></ul>
+        <button type="button" id="add-pokemon-btn">Adicionar</button>
+
+        <div id="selected-pokemons">
+            <h3>Pokémons Selecionados:</h3>
+            <ul id="pokemon-list"></ul>
+        </div>
+
+        <input type="hidden" name="pokemon" id="pokemon-hidden-input" required>
 
         <button type="submit">Cadastrar Treinador</button>
     </form>
@@ -37,4 +46,5 @@
         <li><a href="/search">Buscar Pokémon</a></li>
     </ul>
 </footer>
+<script src="/js/trainerRegister.js"></script>
 </html>

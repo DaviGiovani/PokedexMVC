@@ -14,8 +14,8 @@ async function registerTrainer(req, res) {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.trim().toLowerCase()}`);
             const pokemonData = {
                 name: response.data.name,
-                height: response.data.height,
-                weight: response.data.weight,
+                height: response.data.height / 10,
+                weight: response.data.weight / 10,
                 sprite: response.data.sprites.front_default
             };
             pokemonDataList.push(pokemonData);

@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparação de Pokémon</title>
     <link rel="stylesheet" href="/css/compare.css">
+    <img src="/images/pokemon-logo1.png" width="250px" alt="PokemonLogo">
 </head>
 <body>
     <h1>Comparação de Pokémon</h1>
     <div class="comparison-container">
+        
+        <!-- Primeiro Pokémon -->
         <div class="pokemon">
             <h2><%= pokemon1.name %> (#<%= pokemon1.number %>)</h2>
             <img src="<%= pokemon1.image %>" alt="<%= pokemon1.name %>">
@@ -16,12 +19,17 @@
             <p>Habilidades: <%= pokemon1.abilities.join(', ') %></p>
             <h3>Estatísticas:</h3>
             <ul>
-                <% pokemon1.stats.forEach(stat => { %>
-                    <li><%= stat.name %>: <%= stat.value %></li>
+                <% pokemon1.stats.forEach((stat, index) => { %>
+                    <li>
+                        <span class="<%= stat.value > pokemon2.stats[index].value ? 'higher' : stat.value < pokemon2.stats[index].value ? 'lower' : '' %>">
+                            <%= stat.name %>: <%= stat.value %>
+                        </span>
+                    </li>
                 <% }); %>
             </ul>
         </div>
         
+        <!-- Segundo Pokémon -->
         <div class="pokemon">
             <h2><%= pokemon2.name %> (#<%= pokemon2.number %>)</h2>
             <img src="<%= pokemon2.image %>" alt="<%= pokemon2.name %>">
@@ -29,11 +37,16 @@
             <p>Habilidades: <%= pokemon2.abilities.join(', ') %></p>
             <h3>Estatísticas:</h3>
             <ul>
-                <% pokemon2.stats.forEach(stat => { %>
-                    <li><%= stat.name %>: <%= stat.value %></li>
+                <% pokemon2.stats.forEach((stat, index) => { %>
+                    <li>
+                        <span class="<%= stat.value > pokemon1.stats[index].value ? 'higher' : stat.value < pokemon1.stats[index].value ? 'lower' : '' %>">
+                            <%= stat.name %>: <%= stat.value %>
+                        </span>
+                    </li>
                 <% }); %>
             </ul>
         </div>
+
     </div>
     
     <a href="/search"><button>Voltar</button></a>

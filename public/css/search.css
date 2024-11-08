@@ -90,6 +90,68 @@ p {
     font-size: 1.1em;
 }
 
+.scrollable-list, #pokemon-list, #pokemon-list1, #pokemon-list2  {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 5px 0; 
+  max-height: 400px; 
+  overflow-y: auto;
+  width: 100%;
+  display:block;
+  max-width: 350px; 
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 1px solid #ddd;
+}
+
+#pokemon-list li {
+  padding: 8px 10px; 
+  border-bottom: 1px solid #ddd; 
+  transition: background-color 0.3s; 
+  text-align: left; 
+}
+
+#pokemon-list li:hover {
+  background-color: #d1e7dd; 
+  cursor: pointer; 
+}
+
+#pokemon-list li:last-child {
+  border-bottom: none; 
+}
+
+#pokemon-list1 li {
+  padding: 8px 10px; 
+  border-bottom: 1px solid #ddd; 
+  transition: background-color 0.3s; 
+  text-align: left; 
+}
+
+#pokemon-list1 li:hover {
+  background-color: #d1e7dd; 
+  cursor: pointer; 
+}
+
+#pokemon-list1 li:last-child {
+  border-bottom: none;
+}
+
+#pokemon-list2 li {
+  padding: 8px 10px; 
+  border-bottom: 1px solid #ddd; 
+  transition: background-color 0.3s; 
+  text-align: left;
+}
+
+#pokemon-list2 li:hover {
+  background-color: #d1e7dd; 
+  cursor: pointer; 
+}
+
+#pokemon-list2 li:last-child {
+  border-bottom: none;
+}
+
 label {
 margin-top: 10px;
 
