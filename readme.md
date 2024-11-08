@@ -32,4 +32,13 @@ Nesta página, o usuário pode visualizar todos os treinadores já cadastrados n
 - Na página de comparar pokémon, os stats piores ficam em vermelho, e os melhores em verde.
 - Parte estética melhorada.
 
+![image](https://github.com/user-attachments/assets/61eb7cd5-4f46-47e9-a95f-bef2355247f5)
+![image](https://github.com/user-attachments/assets/51cfde58-3dfb-4eb5-af0d-ddb3c6ac8bc2)
+![image](https://github.com/user-attachments/assets/37b44e99-5917-421c-ba46-57580add160d)
+![image](https://github.com/user-attachments/assets/df21c525-94a4-4500-808c-b4e86d11ecea)
+![image](https://github.com/user-attachments/assets/973b76b7-d462-4d5b-bd98-c52a5a51f248)
+![image](https://github.com/user-attachments/assets/96a6f103-c57a-4986-8072-338ecf2524f2)
+
+
+
 
