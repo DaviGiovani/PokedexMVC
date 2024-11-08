@@ -64,6 +64,8 @@ button:active {
 }
 
 h1 {
+    position:absolute;
+    left: 33%;
     margin-bottom: 20px; 
     background-color: #ffffff;
     padding: 20px;

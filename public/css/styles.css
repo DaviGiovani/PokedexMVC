@@ -48,6 +48,9 @@ color: black;
 }
 
 .pokemon__sprite {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
   position: absolute;
   top: 28%; 
   left: 50%;

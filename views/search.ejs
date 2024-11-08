@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Pokémon</title>
     <link rel="stylesheet" href="/css/search.css">
+    <img src="/images/pokemon-logo1.png" width="250px" alt="PokemonLogo">
 </head>
 <body>
     <div class="search-container">
         <h1>Busque um Pokémon</h1>
         <form action="/pokemon" method="GET" class="search-form">
-            <input type="text" name="name" placeholder="Digite o nome do Pokémon" required class="search-input">
+            <input type="text" name="name" placeholder="Digite o nome do Pokémon" required class="search-input" id="search-input">
+            <ul id="pokemon-list" class="scrollable-list"></ul>
             <button type="submit" class="search-button">Buscar</button>
         </form>
         <h2>Compare 2 Pokémons</h2>
         <form action="/compare" method="get" class="search-form">
+
         <label for="name1">Pokémon 1:</label>
-        <input type="text" name="name1" placeholder="Digite o primeiro Pokémon" required class="search-input">
-        
+        <input type="text" name="name1" placeholder="Digite o primeiro Pokémon" required class="search-input" id="search-input1">
+        <ul id="pokemon-list1" class="scrollable-list"></ul>
+
         <label for="name2">Pokémon 2:</label>
-        <input type="text" name="name2" placeholder="Digite o segundo Pokémon" required class="search-input">
-        
+        <input type="text" name="name2" placeholder="Digite o segundo Pokémon" required class="search-input" id="search-input2">
+        <ul id="pokemon-list2" class="scrollable-list"></ul>
+
         <button type="submit" class="search-button">Comparar</button>
     </form>
     </div>
@@ -35,5 +40,6 @@
         <li><a href="/search">Buscar Pokémon</a></li>
     </ul>
 </footer>
+<script src="/js/search.js"></script>
 </html>
 
