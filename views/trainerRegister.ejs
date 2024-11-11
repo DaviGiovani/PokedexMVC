@@ -8,6 +8,17 @@
     <link rel="shortcut icon" href="/images/favicon.png" />
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-container">
+            <img src="images/pokemon-logo1.png" alt="Logo Pokémon" class="logo">
+            <div class="nav-links">
+                <a href="/">Página inicial</a>
+                <a href="/search">Buscar Pokémon</a>
+                <a href="/trainers">Lista de Treinadores</a>
+                <a href="/register">Cadastrar Treinador</a>
+            </div>
+        </div>
+    </div>
     <h1>Cadastrar Treinador Pokémon</h1>
     <form action="/register" method="POST">
         <label for="name">Nome:</label>
@@ -37,14 +48,5 @@
         <button type="submit">Cadastrar Treinador</button>
     </form>
 </body>
-<footer>
-    <p>Rotas disponíveis:</p>
-    <ul>
-        <li><a href="/">Página Inicial</a></li>
-        <li><a href="/register">Cadastrar Treinador</a></li>
-        <li><a href="/trainers">Lista de Treinadores</a></li>
-        <li><a href="/search">Buscar Pokémon</a></li>
-    </ul>
-</footer>
 <script src="/js/trainerRegister.js"></script>
 </html>

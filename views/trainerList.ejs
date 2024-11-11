@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="/css/trainerList.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-container">
+            <img src="images/pokemon-logo1.png" alt="Logo Pokémon" class="logo">
+            <div class="nav-links">
+                <a href="/">Página inicial</a>
+                <a href="/search">Buscar Pokémon</a>
+                <a href="/trainers">Lista de Treinadores</a>
+                <a href="/register">Cadastrar Treinador</a>
+            </div>
+        </div>
+    </div>
     <h1>Lista de Treinadores</h1>
     <ul>
         <% trainers.forEach(trainer => { %>
@@ -23,6 +34,15 @@
                   <p><strong><%= pokemon.name %></strong></p> 
                   <p>Altura: <%= pokemon.height %> cm</p>
                   <p>Peso: <%= pokemon.weight %> kg</p>
+                  <p>Tipos:
+                    <% if (pokemon.types && pokemon.types.length > 0) { %>
+                        <% pokemon.types.forEach(type => { %>
+                            <span class="type-label type-<%= type %>"><%= type.charAt(0).toUpperCase() + type.slice(1) %></span>
+                        <% }) %>
+                    <% } else { %>
+                        <span>N/A</span>
+                    <% } %>
+                </p>
                 </li>
               <% }) %>
             </ul>
@@ -31,15 +51,4 @@
       </ul>      
     <a href="/register"><button>Cadastrar Novo Treinador</button></a>
 </body>
-<div>
-<footer>
-    <p>Rotas disponíveis:</p>
-    <ul>
-        <li><a href="/">Página Inicial</a></li>
-        <li><a href="/register">Cadastrar Treinador</a></li>
-        <li><a href="/trainers">Lista de Treinadores</a></li>
-        <li><a href="/search">Buscar Pokémon</a></li>
-    </ul>
-</footer>
-</div>
 </html>

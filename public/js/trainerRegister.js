@@ -21,19 +21,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Função para exibir as sugestões
     function displaySuggestions(pokemons) {
-        pokemonSuggestions.innerHTML = ''; 
-        pokemons.slice(0, 10).forEach(pokemon => {
+        pokemonSuggestions.innerHTML = ''; // Limpa as sugestões anteriores
+        pokemons.slice(0, 10).forEach(pokemon => { // Limita a 10 sugestões
             const li = document.createElement('li');
             li.textContent = pokemon.name;
-            li.addEventListener('click', () => addPokemon(pokemon.name));
+            li.addEventListener('click', () => addPokemon(pokemon.name)); // Adiciona ao clicar
             pokemonSuggestions.appendChild(li);
         });
     }
 
+    // Função para remover um Pokémon da lista
+    function removePokemon(pokemonName) {
+        selectedPokemons = selectedPokemons.filter(pokemon => pokemon.name !== pokemonName.toLowerCase());
+        
+        // Atualiza a lista visual e o campo oculto
+        renderPokemonList();
+    }
+
+    // Função para renderizar a lista de Pokémons
+    function renderPokemonList() {
+        pokemonList.innerHTML = ''; // Limpa a lista
+
+        selectedPokemons.forEach(pokemon => {
+            const li = document.createElement('li');
+            li.classList.add('pokemon-item');
+
+            // Cria o elemento de imagem e nome
+            li.innerHTML = `<img src="${pokemon.image}" alt="${pokemon.name}" class="pokemon-image"> ${pokemon.name}`;
+
+            // Cria o botão de remoção
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'X'; // Botão pequeno com "X"
+            removeBtn.classList.add('remove-btn');
+            removeBtn.addEventListener('click', () => removePokemon(pokemon.name));
+
+            // Adiciona o botão de remoção ao item de lista
+            li.appendChild(removeBtn);
+            pokemonList.appendChild(li);
+        });
+
+        // Atualiza o campo oculto
+        pokemonHiddenInput.value = selectedPokemons.map(pokemon => pokemon.name).join(',');
+    }
+
+    // Função para adicionar o Pokémon à lista selecionada
     async function addPokemon(pokemonName) {
-        if (pokemonName && !selectedPokemons.includes(pokemonName.toLowerCase()) && selectedPokemons.length < 6) {
+        if (pokemonName && !selectedPokemons.some(p => p.name === pokemonName.toLowerCase()) && selectedPokemons.length < 6) {
             try {
+                // Faz a requisição para obter dados do Pokémon
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
                 
                 if (!response.ok) {
@@ -44,14 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const pokemonData = await response.json();
                 const pokemonImage = pokemonData.sprites.front_default;
 
-                selectedPokemons.push(pokemonName.toLowerCase());
+                // Adiciona o Pokémon à lista de seleção com a imagem e o nome
+                selectedPokemons.push({ name: pokemonName.toLowerCase(), image: pokemonImage });
 
-                const li = document.createElement('li');
-                li.innerHTML = `<img src="${pokemonImage}" alt="${pokemonName}" class="pokemon-image"> ${pokemonName}`;
-                pokemonList.appendChild(li);
+                // Renderiza a lista com o novo Pokémon
+                renderPokemonList();
 
-                pokemonHiddenInput.value = selectedPokemons.join(',');
-
+                // Limpa o campo de entrada e as sugestões
                 pokemonInput.value = '';
                 pokemonSuggestions.innerHTML = '';
             } catch (error) {
@@ -65,15 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Evento para buscar sugestões enquanto o usuário digita
     pokemonInput.addEventListener('input', () => {
         const query = pokemonInput.value.trim();
         if (query) {
             fetchPokemonSuggestions(query);
         } else {
-            pokemonSuggestions.innerHTML = '';
+            pokemonSuggestions.innerHTML = ''; // Limpa as sugestões se o campo estiver vazio
         }
     });
 
+    // Evento para adicionar Pokémon ao clicar no botão
     addPokemonBtn.addEventListener('click', () => {
         addPokemon(pokemonInput.value.trim());
     });

@@ -8,13 +8,24 @@
     <link rel="shortcut icon" href="/images/favicon.png" />
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-container">
+            <img src="images/pokemon-logo1.png" alt="Logo Pokémon" class="logo">
+            <div class="nav-links">
+                <a href="/">Página inicial</a>
+                <a href="/search">Buscar Pokémon</a>
+                <a href="/trainers">Lista de Treinadores</a>
+                <a href="/register">Cadastrar Treinador</a>
+            </div>
+        </div>
+    </div>
     <div class="pokedex-container"> 
         <div class="pokedex">
             <img src="/images/pokedex.png" alt="Pokedex">
             <img class="pokemon__sprite" src="<%= pokemon.image %>" alt="Imagem do Pokémon">
             <div class="pokemon-info">   
                 <h1 class="pokemon__name capitalize"><%= pokemon.name %></h1>
-                <p>Número: <%= pokemon.number %></p>
+                <p>Nº <%= pokemon.number %></p>
                 <p>Altura: <%= pokemon.height %> m</p>
                 <p>Peso: <%= pokemon.weight %> kg</p>
                 <p>Tipos: <%= pokemon.types.join(', ') %></p>
@@ -26,14 +37,5 @@
         <button>Ver versão Shiny</button>
     </a>
     <a href="/search"><button>Voltar</button></a>
-    <footer>
-        <p>Rotas disponíveis:</p>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/register">Cadastrar Treinador</a></li>
-            <li><a href="/trainers">Lista de Treinadores</a></li>
-            <li><a href="/search">Buscar Pokémon</a></li>
-        </ul>
-    </footer>
 </body>
 </html>

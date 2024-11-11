@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 body {
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    background-image: url('/images/background4.jpg'); 
+    background-repeat: repeat; 
+    background-size: 2000px; 
+    background-color: #f0f0f0; 
     color: rgb(0, 0, 0); 
     font-family: 'Oxanium', cursive;
-    padding: 20px; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
     color: black;
     text-align: center; 
+    margin-top: 50px;
 }
 
 ul {
     list-style-type: none; 
-    padding: 0; 
+    padding: 20px; 
 }
 
 li {
@@ -46,7 +52,7 @@ button {
     justify-content: center;
     border: none;
     border-radius: 5px;
-    background-color: #0000005f;
+    background-color: #000000;
     color: white;
     font-size: 1.2em;
     font-family: 'Oxanium', cursive;
@@ -54,6 +60,8 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    margin-left: 575px;
+    margin-bottom: 50px;
   }
   
   button:hover {
@@ -81,34 +89,122 @@ button {
     height: auto; 
 }
 
-footer {
-    background-color: #a10c0c; 
-    color: white;
+/* Estilos de cor para cada tipo de Pokémon */
+.type-grass { background-color: #78C850; color: #FFFFFF; }
+.type-fire { background-color: #F08030; color: #FFFFFF; }
+.type-water { background-color: #6890F0; color: #FFFFFF; }
+.type-electric { background-color: #F8D030; color: #FFFFFF; }
+.type-ice { background-color: #98D8D8; color: #FFFFFF; }
+.type-fighting { background-color: #C03028; color: #FFFFFF; }
+.type-poison { background-color: #A040A0; color: #FFFFFF; }
+.type-ground { background-color: #E0C068; color: #FFFFFF; }
+.type-flying { background-color: #A890F0; color: #FFFFFF; }
+.type-psychic { background-color: #F85888; color: #FFFFFF; }
+.type-bug { background-color: #A8B820; color: #FFFFFF; }
+.type-rock { background-color: #B8A038; color: #FFFFFF; }
+.type-ghost { background-color: #705898; color: #FFFFFF; }
+.type-dark { background-color: #705848; color: #FFFFFF; }
+.type-dragon { background-color: #7038F8; color: #FFFFFF; }
+.type-steel { background-color: #B8B8D0; color: #FFFFFF; }
+.type-fairy { background-color: #EE99AC; color: #FFFFFF; }
+
+/* Estilo adicional para deixar o texto centralizado e arredondar as bordas */
+.type-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
     text-align: center;
-    padding: 20px 0; 
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
-    margin-top: 20px;
+    margin-right: 5px;
+}
+/* Estilos de cor para cada tipo de Pokémon */
+.type-normal { background-color: #bbc7b8; color: #FFFFFF; }
+.type-grass { background-color: #78C850; color: #FFFFFF; }
+.type-fire { background-color: #F08030; color: #FFFFFF; }
+.type-water { background-color: #6890F0; color: #FFFFFF; }
+.type-electric { background-color: #F8D030; color: #FFFFFF; }
+.type-ice { background-color: #98D8D8; color: #FFFFFF; }
+.type-fighting { background-color: #C03028; color: #FFFFFF; }
+.type-poison { background-color: #A040A0; color: #FFFFFF; }
+.type-ground { background-color: #E0C068; color: #FFFFFF; }
+.type-flying { background-color: #A890F0; color: #FFFFFF; }
+.type-psychic { background-color: #F85888; color: #FFFFFF; }
+.type-bug { background-color: #A8B820; color: #FFFFFF; }
+.type-rock { background-color: #B8A038; color: #FFFFFF; }
+.type-ghost { background-color: #705898; color: #FFFFFF; }
+.type-dark { background-color: #705848; color: #FFFFFF; }
+.type-dragon { background-color: #7038F8; color: #FFFFFF; }
+.type-steel { background-color: #B8B8D0; color: #FFFFFF; }
+.type-fairy { background-color: #EE99AC; color: #FFFFFF; }
+
+/* Estilo adicional para reduzir o tamanho do contêiner */
+.type-label {
+    display: inline-block;
+    padding: 3px 8px; /* Reduzido o padding */
+    font-size: 0.9em; /* Reduzido o tamanho da fonte */
+    border-radius: 10px; /* Bordas ligeiramente menores */
+    font-weight: bold;
+    text-align: center;
+    margin-right: 5px;
 }
 
-footer ul {
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    background-color: #a10c0c;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-footer li {
-    background: none;
-    display: inline-block; 
-    margin: 0 15px; 
+.navbar .nav-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer a {
-    color: white; 
-    text-decoration: none; 
+.navbar img.logo {
+    width: 200px;
+    height: auto;
 }
 
-footer a:hover {
-    text-decoration: underline; 
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ffcb05; 
+    transform: translateY(-5px); 
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffcb05;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
