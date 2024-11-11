@@ -39,6 +39,18 @@ Nesta página, o usuário pode visualizar todos os treinadores já cadastrados n
 ![image](https://github.com/user-attachments/assets/973b76b7-d462-4d5b-bd98-c52a5a51f248)
 ![image](https://github.com/user-attachments/assets/96a6f103-c57a-4986-8072-338ecf2524f2)
 
+# Versão Final
+
+- Estética completamente alterada.
+
+![image](https://github.com/user-attachments/assets/e7d8665c-b15d-4971-b0e3-685811edf75c)
+![image](https://github.com/user-attachments/assets/c12efc6c-78f0-457e-afa5-86a8556f0e45)
+![image](https://github.com/user-attachments/assets/6c294f0e-89b6-48f3-8b7b-bd48c72e81d6)
+![image](https://github.com/user-attachments/assets/7b18fc90-3ef4-4b20-b096-d2063270c930)
+![image](https://github.com/user-attachments/assets/15a4cea9-dd50-401e-a335-c7b349a3da17)
+![image](https://github.com/user-attachments/assets/28677615-bdaa-47e4-b402-f36d8f143740)
+
+
 
 
 
