@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<link rel="shortcut icon" href="/images/favicon.png" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparação de Pokémon</title>
     <link rel="stylesheet" href="/css/compare.css">
-    <img src="/images/pokemon-logo1.png" width="250px" alt="PokemonLogo">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-container">
+            <img src="images/pokemon-logo1.png" alt="Logo Pokémon" class="logo">
+            <div class="nav-links">
+                <a href="/">Página inicial</a>
+                <a href="/search">Buscar Pokémon</a>
+                <a href="/trainers">Lista de Treinadores</a>
+                <a href="/register">Cadastrar Treinador</a>
+            </div>
+        </div>
+    </div>
     <h1>Comparação de Pokémon</h1>
     <div class="comparison-container">
         
-        <!-- Primeiro Pokémon -->
         <div class="pokemon">
             <h2><%= pokemon1.name %> (#<%= pokemon1.number %>)</h2>
             <img src="<%= pokemon1.image %>" alt="<%= pokemon1.name %>">
@@ -28,8 +38,6 @@
                 <% }); %>
             </ul>
         </div>
-        
-        <!-- Segundo Pokémon -->
         <div class="pokemon">
             <h2><%= pokemon2.name %> (#<%= pokemon2.number %>)</h2>
             <img src="<%= pokemon2.image %>" alt="<%= pokemon2.name %>">
@@ -50,15 +58,5 @@
     </div>
     
     <a href="/search"><button>Voltar</button></a>
-
-    <footer>
-        <p>Rotas disponíveis:</p>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/register">Cadastrar Treinador</a></li>
-            <li><a href="/trainers">Lista de Treinadores</a></li>
-            <li><a href="/search">Buscar Pokémon</a></li>
-        </ul>
-    </footer>
 </body>
 </html>

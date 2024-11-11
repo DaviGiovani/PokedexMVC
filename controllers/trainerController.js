@@ -5,18 +5,18 @@ async function registerTrainer(req, res) {
     console.log(req.body);
     try {
         const { name, team, height, weight, pokemon } = req.body;
-
         const pokemonList = pokemon.split(',');
-
         let pokemonDataList = [];
 
         for (let pokemonName of pokemonList) {
             const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.trim().toLowerCase()}`);
+            const types = response.data.types.map(typeInfo => typeInfo.type.name);
             const pokemonData = {
                 name: response.data.name,
                 height: response.data.height / 10,
                 weight: response.data.weight / 10,
-                sprite: response.data.sprites.front_default
+                sprite: response.data.sprites.front_default,
+                types
             };
             pokemonDataList.push(pokemonData);
         }

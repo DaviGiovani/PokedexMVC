@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Pokémon</title>
     <link rel="stylesheet" href="/css/search.css">
-    <img src="/images/pokemon-logo1.png" width="250px" alt="PokemonLogo">
 </head>
 <body>
+    <div class="navbar">
+        <div class="nav-container">
+            <img src="images/pokemon-logo1.png" alt="Logo Pokémon" class="logo">
+            <div class="nav-links">
+                <a href="/">Página inicial</a>
+                <a href="/search">Buscar Pokémon</a>
+                <a href="/trainers">Lista de Treinadores</a>
+                <a href="/register">Cadastrar Treinador</a>
+            </div>
+        </div>
+    </div>
     <div class="search-container">
         <h1>Busque um Pokémon</h1>
         <form action="/pokemon" method="GET" class="search-form">
@@ -31,15 +41,6 @@
     </form>
     </div>
 </body>
-<footer>
-    <p>Rotas disponíveis:</p>
-    <ul>
-        <li><a href="/">Página Inicial</a></li>
-        <li><a href="/register">Cadastrar Treinador</a></li>
-        <li><a href="/trainers">Lista de Treinadores</a></li>
-        <li><a href="/search">Buscar Pokémon</a></li>
-    </ul>
-</footer>
 <script src="/js/search.js"></script>
 </html>
 

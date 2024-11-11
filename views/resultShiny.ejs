@@ -14,7 +14,7 @@
             <img class="pokemon__sprite" src="<%= shinyPokemon.image %>" alt="Sprite Shiny do Pokémon">
             <div class="pokemon-info">   
                 <h1 class="pokemon__name capitalize"><%= shinyPokemon.name %></h1>
-                <p>Número: <%= shinyPokemon.number %></p>
+                <p>Nº <%= shinyPokemon.number %></p>
                 <p>Altura: <%= shinyPokemon.height %> m</p>
                 <p>Peso: <%= shinyPokemon.weight %> kg</p>
                 <p>Tipos: <%= shinyPokemon.types.join(', ') %></p>
@@ -25,14 +25,5 @@
     <a href="/pokemon?name=<%= shinyPokemon.name %>">
         <button>Ver versão padrão</button>
     </a>
-    <footer>
-        <p>Rotas disponíveis:</p>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/register">Cadastrar Treinador</a></li>
-            <li><a href="/trainers">Lista de Treinadores</a></li>
-            <li><a href="/search">Buscar Pokémon</a></li>
-        </ul>
-    </footer>
 </body>
 </html>
